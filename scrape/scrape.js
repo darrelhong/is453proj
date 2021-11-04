@@ -49,7 +49,9 @@ const { tickers } = require('./tickers');
 
         }
         catch (err) {
-            console.log('holloe')
+            console.log(ticker)
+            await page.goto('https://www.ortex.com/view/main')
+            await page.waitForTimeout(10000);
             continue
         }
     }
